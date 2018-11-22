@@ -36,12 +36,12 @@ flow-typed/npm/*
 
 # App packaged
 release
-app/main.prod.js
-app/main.prod.js.map
-app/renderer.prod.js
-app/renderer.prod.js.map
-app/style.css
-app/style.css.map
+app/electron/main.prod.js
+app/electron/main.prod.js.map
+app/electron/renderer.prod.js
+app/electron/renderer.prod.js.map
+app/electron/style.css
+app/electron/style.css.map
 dist
 dll
 main.js

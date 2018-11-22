@@ -49,7 +49,7 @@ export default merge.smart(baseConfig, {
     'react-hot-loader/patch',
     `webpack-dev-server/client?http://localhost:${port}/`,
     'webpack/hot/only-dev-server',
-    require.resolve('../app/index')
+    require.resolve('../app/src/index')
   ],
 
   output: {
@@ -68,6 +68,20 @@ export default merge.smart(baseConfig, {
             cacheDirectory: true
           }
         }
+      },
+      {
+        test: /\*\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.global\.css$/,
