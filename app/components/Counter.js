@@ -1,4 +1,5 @@
 // @flow
+import { DatePicker } from 'antd';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Counter.css';
@@ -66,6 +67,7 @@ export default class Counter extends Component<Props> {
           >
             async
           </button>
+          <DatePicker />
         </div>
       </div>
     );
