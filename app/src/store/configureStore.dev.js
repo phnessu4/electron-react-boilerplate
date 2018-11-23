@@ -3,8 +3,12 @@ import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'connected-react-router';
 import { createLogger } from 'redux-logger';
+import createSagaMiddleware from 'redux-saga';
+
 import createRootReducer from '../reducers';
 import * as counterActions from '../actions/counter';
+import mySaga from '../sagas';
+
 import type { counterStateType } from '../reducers/types';
 
 const history = createHashHistory();
@@ -18,6 +22,10 @@ const configureStore = (initialState?: counterStateType) => {
 
   // Thunk Middleware
   middleware.push(thunk);
+
+  // Saga Middleware
+  const sagaMiddleware = createSagaMiddleware();
+  middleware.push(sagaMiddleware);
 
   // Logging Middleware
   const logger = createLogger({
@@ -63,6 +71,7 @@ const configureStore = (initialState?: counterStateType) => {
       () => store.replaceReducer(require('../reducers').default)
     );
   }
+  sagaMiddleware.run(mySaga);
 
   return store;
 };

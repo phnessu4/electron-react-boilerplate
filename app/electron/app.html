@@ -35,8 +35,6 @@
         }
         scripts.push(dynamicBundleScript);
 
-        console.log(scripts);
-
         const scriptContent = scripts.map(script => `<script defer src="${script}"><\/script>`).join('');
         document.write(scriptContent);
       }
