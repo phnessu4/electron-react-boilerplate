@@ -1,20 +1,19 @@
-// @flow
+//
 import { DatePicker } from 'antd';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './Counter.css';
 import routes from '../constants/routes';
 
-type Props = {
-  increment: () => void,
-  incrementIfOdd: () => void,
-  incrementAsync: () => void,
-  decrement: () => void,
-  counter: number
-};
-
-export default class Counter extends Component<Props> {
-  props: Props;
+class Counter extends Component {
+  static propTypes = {
+    increment: PropTypes.func,
+    incrementIfOdd: PropTypes.func,
+    incrementAsync: PropTypes.func,
+    decrement: PropTypes.func,
+    counter: PropTypes.number
+  };
 
   render() {
     const {
@@ -73,3 +72,5 @@ export default class Counter extends Component<Props> {
     );
   }
 }
+
+export default Counter;

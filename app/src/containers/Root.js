@@ -1,16 +1,21 @@
-// @flow
+//
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect, Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import type { Store } from '../reducers/types';
 import Routes from '../Routes';
 
-type Props = {
-  store: Store,
-  history: {}
-};
+class Root extends Component {
+  static propTypes = {
+    store: PropTypes.object,
+    history: PropTypes.object
+  };
 
-class Root extends Component<Props> {
+  static defaultProps = {
+    store: {},
+    history: {}
+  };
+
   render() {
     const { store, history } = this.props;
     return (

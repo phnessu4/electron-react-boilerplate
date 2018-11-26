@@ -1,4 +1,4 @@
-// @flow
+//
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Layout, Button } from 'antd';
@@ -7,13 +7,7 @@ import Home from '../components/Home';
 
 const { Header, Footer, Content } = Layout;
 
-type Props = {
-  dispatch: () => {}
-};
-
-class HomePage extends Component<Props> {
-  props: Props;
-
+class HomePage extends Component {
   onDispatch = () => {
     const { dispatch } = this.props;
     dispatch({ type: 'USER_FETCH_REQUESTED', payload: {} });
