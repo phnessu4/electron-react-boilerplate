@@ -18,9 +18,10 @@
   "search.exclude": {
     ".git": true,
     ".eslintcache": true,
-    "app/dist": true,
-    "app/dist/main.prod.js": true,
-    "app/dist/main.prod.js.map": true,
+    "build/dll": true,
+    "build/dist": true,
+    "build/dist/main.prod.js": true,
+    "build/dist/main.prod.js.map": true,
     "bower_components": true,
     "dll": true,
     "release": true,

@@ -86,7 +86,7 @@ For full change list, see https://github.com/electron-react-boilerplate/electron
 #### Breaking
 
 - Changed node dev `__dirname` and `__filename` to node built in fn's (https://github.com/electron-react-boilerplate/electron-react-boilerplate/pull/1035)
-- Renamed `app/electron/bundle.js` to `app/dist/renderer.prod.js` for consistency
+- Renamed `app/electron/bundle.js` to `build/dist/renderer.prod.js` for consistency
 - Renamed `dll/vendor.js` to `dll/renderer.dev.dll.js` for consistency
 
 #### Additions
