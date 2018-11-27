@@ -24,7 +24,7 @@
     "postlint-styles-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.{css,scss}'",
     "precommit": "lint-staged",
     "prestart": "yarn build",
-    "start": "cross-env NODE_ENV=production electron ./app/electron/main.prod.js",
+    "start": "cross-env NODE_ENV=production electron ./app/dist/main.prod.js",
     "start-main-dev": "cross-env HOT=1 NODE_ENV=development electron -r @babel/register ./app/electron/main.dev.js",
     "start-renderer-dev": "cross-env NODE_ENV=development webpack-dev-server --config configs/webpack.config.renderer.dev.babel.js",
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 jest",
@@ -53,15 +53,15 @@
       "git add"
     ]
   },
-  "main": "./app/electron/main.prod.js",
+  "main": "./app/dist/main.prod.js",
   "build": {
     "productName": "ElectronReact",
     "appId": "org.develar.ElectronReact",
     "files": [
       "app/dist/",
-      "app/electron/app.html",
-      "app/electron/main.prod.js",
-      "app/electron/main.prod.js.map",
+      "app/dist/app.html",
+      "app/dist/main.prod.js",
+      "app/dist/main.prod.js.map",
       "package.json"
     ],
     "dmg": {

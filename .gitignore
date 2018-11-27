@@ -32,12 +32,12 @@ node_modules
 
 # App packaged
 release
-app/electron/main.prod.js
-app/electron/main.prod.js.map
-app/electron/renderer.prod.js
-app/electron/renderer.prod.js.map
-app/electron/style.css
-app/electron/style.css.map
+app/dist/main.prod.js
+app/dist/main.prod.js.map
+app/dist/renderer.prod.js
+app/dist/renderer.prod.js.map
+app/dist/style.css
+app/dist/style.css.map
 dist
 dll
 main.js
