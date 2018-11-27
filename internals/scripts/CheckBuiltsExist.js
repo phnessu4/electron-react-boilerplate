@@ -9,7 +9,7 @@ function CheckBuildsExist() {
     __dirname,
     '..',
     '..',
-    'app',
+    'build',
     'dist',
     'main.prod.js'
   );
@@ -17,7 +17,7 @@ function CheckBuildsExist() {
     __dirname,
     '..',
     '..',
-    'app',
+    'build',
     'dist',
     'renderer.prod.js'
   );

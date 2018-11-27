@@ -8,7 +8,7 @@
         if (!process.env.HOT) {
           const link = document.createElement('link');
           link.rel = 'stylesheet';
-          link.href = './dist/style.css';
+          link.href = '../build/dist/style.css';
           // HACK: Writing the script path should be done with webpack
           document.getElementsByTagName('head')[0].appendChild(link);
         }
@@ -29,7 +29,7 @@
 
         // Dynamically insert the bundled app script in the renderer process
         const port = process.env.PORT || 1212;
-        let dynamicBundleScript = '../dist/renderer.prod.js'
+        let dynamicBundleScript = '../build/dist/renderer.prod.js'
         if (process.env.HOT) {
           dynamicBundleScript = 'http://localhost:' + port + '/dist/renderer.dev.js';
         }
