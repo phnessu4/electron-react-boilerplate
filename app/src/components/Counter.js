@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './Counter.css';
-import routes from '../constants/routes';
+import routes from '../router/config';
 
 class Counter extends Component {
   static propTypes = {
